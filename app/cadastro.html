@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+    <head>
+        <title>Testando SASS</title>
+    </head>
+
+    <!--build:js js/main.min.js -->
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+
+    <!--build:css css/styles.min.css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- endbuild -->
+    <body style="background-color: white;">
+        <header class="header">
+        <div id="mySidenav" class="sidenav" visibility="hidden">
+            <img src="https://www.seugado.com/PF.Base/static/image/logo_white.png?v=1491875208" class="header__img">
+            <a onclick="closeNav()" class="sidenav-close-btn"><span>X</span></a>
+            <a href="index.html" class="sidenav__topics"><img src="images/message-alert.png" class='iconDetails_sidebar'/>Noticias</a>
+            <a href="about.html" class="sidenav__topics"><img src="images/dna.png" class='iconDetails_sidebar'/>Raças</a>
+            <a href="about.html" class="sidenav__topics"><img src="images/school.png" class='iconDetails_sidebar'/>Primeiros passos</a>
+            <a href="about.html" class="sidenav__topics"><img src="images/book-open-page-variant.png" class='iconDetails_sidebar'/>História</a>
+            <hr>
+            <a href="about.html" class="sidenav__topics"><img src="images/information-outline.png" class='iconDetails_sidebar'/>About</a>
+            <a href="help.html" class="sidenav__topics"><img src="images/help-circle-outline.png" class='iconDetails_sidebar'/>Help</a>
+            <a href="index.html" class="sidenav__topics"><img src="images/logout-variant.png" class='iconDetails_sidebar'/>Sair</a>
+    </div>
+        </div>
+            <img src="https://www.seugado.com/PF.Base/static/image/logo_white.png?v=1491875208" class="header__img--principal--login">
+            <h3 class="header__explanation--login">Wiki</h3>
+        </a>
+        </header>
+
+        <h1 class="headline">Cadastre-se</h1>
+        <form action="paginaprincipal.html" style="padding-bottom: 10px;">
+            <div class="dadosUsuario">
+                <input placeholder="Nome" class="dadosUsuario__usuario" type="text">
+                </br><input placeholder="E-mail" class="dadosUsuario__senha" type="text">
+                </br><input placeholder="Senha" class="dadosUsuario__senha" type="password">
+                </br><input type="checkbox" ><label class="dadosUsuario__terms">Eu aceito os Termos e Condições</label>    
+                </br><button class="dadosUsuario__cadastro">Cadastrar</button></a>
+            </div>
+        </form>
+        <hr>
+    </body>
+
+
+</html>

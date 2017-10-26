@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+.header {
+  position: fixed;
+  height: 50px;
+  background-color: #00413d;
+  display: flex;
+  top: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  justify-content: space-between; }
+  .header svg {
+    width: 25px;
+    fill: white;
+    padding-left: 5px; }
+  .header__img {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #504d4d;
+    left: 0;
+    right: 0;
+    height: 60px;
+    width: 250px;
+    position: relative;
+    background-color: #00413d; }
+  .header__img--principal {
+    height: 33px;
+    width: 130px;
+    margin-right: -15%; }
+  .header__explanation {
+    font-family: Merriweather;
+    letter-spacing: 2px;
+    color: white; }
+  .header__img--principal--login {
+    height: 33px;
+    width: 130px;
+    margin-right: -15%;
+    padding-left: 90px; }
+  .header__explanation--login {
+    font-family: Merriweather;
+    letter-spacing: 2px;
+    color: white;
+    padding-right: 90px; }
+  .header__explanation--option {
+    font-family: Merriweather;
+    letter-spacing: 2px;
+    color: black;
+    text-align: center;
+    padding-top: 5px; }
+
+.search-bar {
+  padding-right: 50px;
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 15px; }
+
+.header .header__menu {
+  max-width: 35px;
+  flex: 2;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.header .header__menu--search {
+  max-width: 35px;
+  flex: 2;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 20px;
+  padding-top: 1px;
+  padding-right: 12px; }
+
+.header .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #6a9f31;
+  overflow-x: hidden;
+  transition: 0.5s; }
+  .header .sidenav__topics {
+    text-decoration: none;
+    font-family: Ubuntu;
+    text-align: left;
+    padding-left: 10px;
+    flex: 1;
+    color: white;
+    font-size: 18px; }
+
+.sidenav a {
+  text-align: left;
+  border-top: 10px;
+  margin-left: 5%;
+  font-size: 15px;
+  color: #993333;
+  display: block;
+  transition: 0.3s;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  vertical-align: middle; }
+
+.iconDetails {
+  margin-left: 5%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  float: left;
+  height: 70px;
+  width: 100px; }
+
+.iconDetails_sidebar {
+  margin-right: 10%;
+  float: left;
+  height: 30px;
+  width: 30px;
+  margin-top: -1%; }
+
+.sidenav-close-btn {
+  position: absolute;
+  top: 0;
+  right: 5px; }
+
+.sidenav-close-btn span {
+  color: white;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  padding: 10px;
+  cursor: pointer; }
+
+.headline {
+  padding-top: 40px;
+  padding-left: 10px;
+  text-align: center;
+  font-family: Roboto Condensed; }
+
+.dadosUsuario {
+  text-align: center; }
+  .dadosUsuario__usuario {
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+    padding-left: 5px;
+    margin-bottom: 1%; }
+  .dadosUsuario__senha {
+    margin-bottom: 2%;
+    margin-top: 2%;
+    height: 30px;
+    width: 250px;
+    margin-left: 1%;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 5px;
+    font-size: 15px; }
+  .dadosUsuario__forgotPass {
+    padding-right: 100px;
+    text-decoration: none;
+    color: #6a9f31;
+    font-family: Roboto Condensed; }
+  .dadosUsuario__keepConnect {
+    padding-right: 100px;
+    text-decoration: none;
+    color: #6a9f31;
+    font-family: Roboto Condensed; }
+  .dadosUsuario__entrar {
+    margin-top: 10%;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    background-color: #6a9f31;
+    border: none;
+    font-family: Roboto Condensed;
+    font-size: 20px;
+    color: white; }
+  .dadosUsuario__cadastrar {
+    border-radius: 5px;
+    height: 40px;
+    width: 120px;
+    background-color: #6a9f31;
+    border: none;
+    font-family: Roboto Condensed;
+    font-size: 20px;
+    color: white;
+    margin-top: -15%; }
+  .dadosUsuario__cadastro {
+    border-radius: 5px;
+    height: 40px;
+    width: 120px;
+    background-color: #6a9f31;
+    border: none;
+    font-family: Roboto Condensed;
+    font-size: 20px;
+    color: white;
+    margin: 7%; }
+  .dadosUsuario__terms {
+    text-decoration: none;
+    color: #6a9f31;
+    font-family: Roboto Condensed;
+    padding-top: 10px; }
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px; }
+
+.fa:hover {
+  opacity: 0.7; }
+
+.fa-facebook {
+  background: #3B5998;
+  color: white; }
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white; }
+
+.fa-google {
+  background: #dd4b39;
+  color: white; }
+
+.socialMedias {
+  text-align: center; }
+  .socialMedias__option {
+    padding-top: 5px;
+    padding-left: 10px;
+    text-align: center;
+    font-family: Roboto Condensed; }
+  .socialMedias__option--account {
+    padding-left: 10px;
+    text-align: center;
+    font-family: Roboto Condensed;
+    margin-bottom: 1%; }
