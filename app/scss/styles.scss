@@ -1,6 +1,96 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+  
+  @mixin transform($transformation) {
+    transform: $transformation;
+    -webkit-transform: $transformation;
+    -moz-transform: $transformation;
+    -ms-transform: $transformation;
+    -o-transform: $transformation;  
+  }
+  
+  //Add your own mixins here
+  @mixin backface-visibility($visibility: hidden) { //Add an argument
+    backface-visibility: $visibility;
+    -webkit-backface-visibility: $visibility;
+    -moz-backface-visibility: $visibility;
+    -ms-backface-visibility: $visibility;
+    -o-backface-visibility: $visibility;
+  }
+  @mixin transform-style($style){
+     transform-style: $style;
+    -moz-transform-style: $style;
+    -o-transform-style: $style;
+    -ms-transform-style: $style;
+    -webkit-transform-style: $style;
+  }
+  @mixin transition($time){
+    transition: $time;
+    -webkit-transition: $time;
+    -moz-transition: $time;
+    -o-transition: $time;
+  }
+  @mixin hover-color($color) {
+     &:hover{
+         color: $color;
+     }
+  }
+
+.notecard {
+    width: 320px;
+    height: 202px;
+    margin: 20px;
+    z-index: initial;
+    font-family: Roboto, sans-serif;
+    box-shadow: 1px 1px 2px 2px rgba(0,0,0,.2);
+    &:active{
+        @include transform (rotatey(-180deg));  
+      }
+    @include transform-style(preserve-3d);
+    @include transition(0.4s);
+    
+    .front, .back {
+      padding-right: 15px;  
+      width: 90%;
+      height: 100%;
+      position: absolute;
+      @include backface-visibility;
+  }
+    
+    .front {
+    z-index: 3;
+    font-size: 20px;
+  
+      .word {
+        text-align: center;
+        top: 0;
+        @include hover-color(red);
+        &__card{
+            width: 320px;
+            
+        }
+      }    
+    }
+    
+    
+    .back {
+    z-index: 2;
+    word-wrap: break-word;
+    line-height: 1.6;
+    @include transform(rotatey(-180deg));
+    
+      
+      .definition {
+        width: 100%;
+        height: 100%;
+        padding-top: 5px; 
+        height: 100%;
+      }
+    }
+}
+
 $color-header: #00413d;
 $color-header-title: #CC00FF;
 .header{
@@ -11,6 +101,7 @@ $color-header-title: #CC00FF;
     top: 0;
     right: 0;
     left: 0;
+    z-index: 4;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
@@ -36,30 +127,27 @@ $color-header-title: #CC00FF;
         width: 130px;
         margin-right: -15%;
     }
+    &__principal{
+        @extend .header__img--principal;
+        padding-left: 90px;
+    }
     &__explanation{   
         font-family: Merriweather;
         letter-spacing: 2px;
         color: white;
     }
-    &__img--principal--login{
-        height: 33px;
-        width: 130px;
-        margin-right: -15%;
-        padding-left: 90px;
-    }
-    &__explanation--login{   
-        font-family: Merriweather;
-        letter-spacing: 2px;
-        color: white;
+    &__index{
+        @extend .header__explanation;
         padding-right: 90px;
     }
-    &__explanation--option{   
+    &__index--option{   
         font-family: Merriweather;
         letter-spacing: 2px;
         color: black;
         text-align: center;
         padding-top: 5px;
     }
+    
 }
 
 .search-bar{
@@ -174,13 +262,8 @@ $color-header-title: #CC00FF;
     &__senha{
         margin-bottom: 2%;
         margin-top: 2%;
-        height: 30px;
-        width: 250px;
         margin-left: 1%;
-        border-radius: 5px;
-        outline: none;
-        padding-left: 5px;
-        font-size: 15px;
+        @extend .dadosUsuario__usuario;
     }
     &__forgotPass{
         padding-right: 100px;
@@ -189,10 +272,7 @@ $color-header-title: #CC00FF;
         font-family: Roboto Condensed;
     }
     &__keepConnect{
-        padding-right: 100px;
-        text-decoration: none;
-        color: #6a9f31;
-        font-family: Roboto Condensed;
+        @extend .dadosUsuario__forgotPass;
     }
     &__entrar{
         margin-top: 10%;
@@ -279,4 +359,37 @@ $color-header-title: #CC00FF;
         font-family: Roboto Condensed;
         margin-bottom: 1%;
     }
+}
+
+.racas{
+    padding-top: 30px;
+    text-align: center;
+    margin-left: -2%;
+}
+.primeirosPassos{
+    @extend .racas;
+    &__topics{
+        font-family: Roboto Condensed;
+        font-size: 30px;
+        margin-bottom: -0.5%;
+    }
+    &__explanation{
+        text-align: justify;
+        margin: 2%;
+        font-family: Raleway;
+        font-size: 14px;
+    }
+}
+.topics__separator{
+    margin-bottom: -3%;
+}
+.topics__names{
+    text-align: justify;
+    font-family: Raleway;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.topics__names--link{
+    text-decoration: none;
 }

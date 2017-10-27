@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+    <head>
+        <title>Testando SASS</title>
+    </head>
+
+    <!--build:js js/main.min.js -->
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+
+    <!--build:css css/styles.min.css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
+    <body style="background-color: white;">
+        <header class="header">
+        <div id="mySidenav" class="sidenav" visibility="hidden">
+            <img src="https://www.seugado.com/PF.Base/static/image/logo_white.png?v=1491875208" class="header__img">
+            <a onclick="closeNav()" class="sidenav-close-btn"><span>X</span></a>
+            <a href="index.html" class="sidenav__topics"><img src="images/message-alert.png" class='iconDetails_sidebar'/>Noticias</a>
+            <a href="racas.html" class="sidenav__topics"><img src="images/dna.png" class='iconDetails_sidebar'/>Raças</a>
+            <a href="primeirospassos.html" class="sidenav__topics"><img src="images/school.png" class='iconDetails_sidebar'/>Primeiros passos</a>
+            <a href="#" class="sidenav__topics"><img src="images/book-open-page-variant.png" class='iconDetails_sidebar'/>História</a>
+            <hr>
+            <a href="about.html" class="sidenav__topics"><img src="images/information-outline.png" class='iconDetails_sidebar'/>About</a>
+            <a href="help.html" class="sidenav__topics"><img src="images/help-circle-outline.png" class='iconDetails_sidebar'/>Help</a>
+            <a href="index.html" class="sidenav__topics"><img src="images/logout-variant.png" class='iconDetails_sidebar'/>Sair</a>
+    </div>
+        </div>
+            <div class="header__menu" onclick="openNav()">
+                <svg viewBox="0 -2 24 24" >
+                    <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                </svg>
+            </div>
+            
+            <img src="https://www.seugado.com/PF.Base/static/image/logo_white.png?v=1491875208" class="header__img--principal">
+            <h3 class="header__explanation">Wiki</h3>
+            <a href="search.html">
+            <div class="header__menu--search" >
+                <svg viewBox="0 0 24 24">
+                    <path fill="white" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                </svg>
+            </div>
+            </a>
+        </a>
+        </header>
+        <div class="primeirosPassos">
+            <h2 class="primeirosPassos__topics">Conceitos</h2>
+            <h3 class="primeirosPassos__explanation">
+                Agropecuária reúne os substantivos agricultura e pecuária. É utilizada por pequenos produtores que utilizam práticas tradicionais, onde o conhecimento das técnicas é repassado através de gerações. É praticada no campo e refere-se à técnicas que envolvem animais bovinos.
+            </h3>
+            <hr class="topics__separator">
+            <h2 class="primeirosPassos__topics">Sumário</h2>
+            <ol>
+                <li class="topics__names"><a href="primeirospassos.html#uso_da_terra" class="topics__names--link">Uso da terra</a></li>
+                <li class="topics__names"><a href="primeirospassos.html#objetivos" class="topics__names--link">Objetivos</a></li>
+                <li class="topics__names"><a href="primeirospassos.html#meio_ambiente" class="topics__names--link">Meio Ambiente</a></li>
+            </ol>
+            <hr class="topics__separator">
+            <h2 class="primeirosPassos__topics" id="uso_da_terra">Uso da Terra</h2>
+            <h3 class="primeirosPassos__explanation">
+                    A agricultura é um conjunto de técnicas que o homem criou para produzir mais. Podemos dividir esse sistema em duas partes:
+            </h3>
+            <ul>
+                <li class="topics__names">Da zona temperada: Realiza a rotação de 3 em 3 anos dos cultivos, o que traz um uso intensivo da terra, pois não existem espaços ociosos durante o ano. É característico da agricultura na Europa, EUA e Canadá.</li>
+                <li class="topics__names">Da zona tropical: é um cultivo com queimadas, no qual a colheita é realizada durante alguns anos apenas, pois o solo não apresenta mais fertilidade. É chamada de agricultura itinerante e extensiva, e caracteriza-se pelos baixos rendimentos, pela rotação de terras e pela baixa densidade demográfica rural. É encontrada nos países tropicais que sofreram a implantação da plantação em seu período colonial, com monocultura em latifúndios, mão-de-obra barata e objetos exploratórios de coco.</li>
+            </ul>
+            <hr class="topics__separator">
+            <h2 class="primeirosPassos__topics" id="objetivos">Objetivos</h2>
+            <h3 class="primeirosPassos__explanation">
+                    Pode-se classificar a agricultura de acordo com a sua finalidade:
+            </h3>
+            <ol>
+                <li class="topics__names">Agricultura de subsistência: a produção destina-se ao consumo do próprio produtor.</li>
+                <li class="topics__names">Agricultura comercial: é destinada à venda, portanto quem define a produção é o mercado consumidor.</li>
+                <li class="topics__names">Agricultura especulativa: organizada para a exportação, não se relaciona com os interesses da economia e da sociedade local.</li>
+                <li class="topics__names">Agricultura coletivista: organizada segundo as necessidades sociais do país onde é praticada, não se volta para o mercado externo, a procura de lucros. (ex.: Kibutzim em Israel, fazendas estatais com trabalho comunitário, elevados níveis de integração social e finalidade de defesa militar).</li>
+                <li class="topics__names">Agricultura científica: característica da agricultura moderna. É amplamente usada nos países ricos, ou desenvolvidos.</li>
+                <li class="topics__names">Agricultura de plantation: é uma monocultura com finalidades comerciais, que conta com a aplicação intensiva de capitais para a plantação em larga escala.</li>
+            </ol>
+            <hr class="topics__separator">
+            <h2 class="primeirosPassos__topics" id="meio_ambiente">Meio Ambiente</h2>
+            <h3 class="primeirosPassos__explanation">
+                    As atividades agropecuárias são utilizadoras de recursos naturais, principalmente solo e água. Com o avanço dos sistemas agropecuários sobre as áreas de ecossistemas nativos, gera-se a preocupação sobre os impactos ambientais dessas atividades. Para a minimização desses impactos, uma das alternativas seria focar em um uso mais racional das áreas já ocupadas, mas que estejam subutilizadas, degradadas ou abandonadas. O respeito à legislação ambiental, conservando as áreas de preservação permanente e as reservas legais também contribui para que as propriedades rurais continuem prestando os serviços ambientais essenciais.
+            </h3>
+        </div>
+        
+    </body>
+
+
+</html>

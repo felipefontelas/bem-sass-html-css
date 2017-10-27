@@ -1,6 +1,64 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+.notecard {
+  width: 320px;
+  height: 202px;
+  margin: 20px;
+  z-index: initial;
+  font-family: Roboto, sans-serif;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s; }
+  .notecard:active {
+    transform: rotatey(-180deg);
+    -webkit-transform: rotatey(-180deg);
+    -moz-transform: rotatey(-180deg);
+    -ms-transform: rotatey(-180deg);
+    -o-transform: rotatey(-180deg); }
+  .notecard .front, .notecard .back {
+    padding-right: 15px;
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden; }
+  .notecard .front {
+    z-index: 3;
+    font-size: 20px; }
+    .notecard .front .word {
+      text-align: center;
+      top: 0; }
+      .notecard .front .word:hover {
+        color: red; }
+      .notecard .front .word__card {
+        width: 320px; }
+  .notecard .back {
+    z-index: 2;
+    word-wrap: break-word;
+    line-height: 1.6;
+    transform: rotatey(-180deg);
+    -webkit-transform: rotatey(-180deg);
+    -moz-transform: rotatey(-180deg);
+    -ms-transform: rotatey(-180deg);
+    -o-transform: rotatey(-180deg); }
+    .notecard .back .definition {
+      width: 100%;
+      height: 100%;
+      padding-top: 5px;
+      height: 100%; }
+
 .header {
   position: fixed;
   height: 50px;
@@ -9,6 +67,7 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 4;
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
@@ -27,25 +86,19 @@
     width: 250px;
     position: relative;
     background-color: #00413d; }
-  .header__img--principal {
+  .header__img--principal, .header__principal {
     height: 33px;
     width: 130px;
     margin-right: -15%; }
-  .header__explanation {
+  .header__principal {
+    padding-left: 90px; }
+  .header__explanation, .header__index {
     font-family: Merriweather;
     letter-spacing: 2px;
     color: white; }
-  .header__img--principal--login {
-    height: 33px;
-    width: 130px;
-    margin-right: -15%;
-    padding-left: 90px; }
-  .header__explanation--login {
-    font-family: Merriweather;
-    letter-spacing: 2px;
-    color: white;
+  .header__index {
     padding-right: 90px; }
-  .header__explanation--option {
+  .header__index--option {
     font-family: Merriweather;
     letter-spacing: 2px;
     color: black;
@@ -142,7 +195,7 @@
 
 .dadosUsuario {
   text-align: center; }
-  .dadosUsuario__usuario {
+  .dadosUsuario__usuario, .dadosUsuario__senha {
     height: 30px;
     width: 250px;
     border-radius: 5px;
@@ -153,19 +206,8 @@
   .dadosUsuario__senha {
     margin-bottom: 2%;
     margin-top: 2%;
-    height: 30px;
-    width: 250px;
-    margin-left: 1%;
-    border-radius: 5px;
-    outline: none;
-    padding-left: 5px;
-    font-size: 15px; }
-  .dadosUsuario__forgotPass {
-    padding-right: 100px;
-    text-decoration: none;
-    color: #6a9f31;
-    font-family: Roboto Condensed; }
-  .dadosUsuario__keepConnect {
+    margin-left: 1%; }
+  .dadosUsuario__forgotPass, .dadosUsuario__keepConnect {
     padding-right: 100px;
     text-decoration: none;
     color: #6a9f31;
@@ -241,3 +283,31 @@
     text-align: center;
     font-family: Roboto Condensed;
     margin-bottom: 1%; }
+
+.racas, .primeirosPassos {
+  padding-top: 30px;
+  text-align: center;
+  margin-left: -2%; }
+
+.primeirosPassos__topics {
+  font-family: Roboto Condensed;
+  font-size: 30px;
+  margin-bottom: -0.5%; }
+
+.primeirosPassos__explanation {
+  text-align: justify;
+  margin: 2%;
+  font-family: Raleway;
+  font-size: 14px; }
+
+.topics__separator {
+  margin-bottom: -3%; }
+
+.topics__names {
+  text-align: justify;
+  font-family: Raleway;
+  font-size: 18px;
+  padding: 5px; }
+
+.topics__names--link {
+  text-decoration: none; }
